@@ -1,5 +1,6 @@
 package com.hectorbru.rabbitmq_poc.publications;
 
+import com.hectorbru.rabbitmq_poc.users.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,9 +26,7 @@ public class Publication {
     @Column
     private int numberOfLikes;
 
-/*
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User creator;
-*/
-
 }
